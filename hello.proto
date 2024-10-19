@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+option go_package = "module github.com/oswoa/backend-service";
+
+service Greeter {
+    rpc Hello (Request) returns (Response);
+}
+
+message Request {
+    int32 kind = 1;
+}
+
+message Response {
+    int32 msg = 1;
+}
