@@ -3,13 +3,31 @@ syntax = "proto3";
 option go_package = "github.com/oswoa/backend-service";
 
 service BackendService {
+    // サンプル用API
     rpc Hello (HelloRequest) returns (HelloResponse);
+
+    // ユーザ一覧照会API
+    rpc UserList (UserListRequest) returns (UserListResponse);
 }
 
+// サンプル用API リクエスト
 message HelloRequest {
     int32 kind = 1;
 }
 
+// サンプル用API レスポンス
 message HelloResponse {
     string msg = 1;
+}
+
+// ユーザ一覧照会API リクエスト
+message UserListRequest {
+    string email = 1;
+    bool isDeleted = 2;
+}
+
+// ユーザ一覧照会API レスポンス
+message UserListResponse {
+    string userId = 1;
+    string email = 2;
 }
