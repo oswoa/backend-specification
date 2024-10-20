@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-option go_package = "module github.com/oswoa/backend-service";
+option go_package = "github.com/oswoa/backend-service";
 
 service BackendService {
     rpc Hello (HelloRequest) returns (HelloResponse);
@@ -11,5 +11,5 @@ message HelloRequest {
 }
 
 message HelloResponse {
-    int32 msg = 1;
+    string msg = 1;
 }
