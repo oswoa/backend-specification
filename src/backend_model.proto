@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+option go_package = "github.com/oswoa/backend-service";
+
+// ユーザ詳細 モデル
+message UserDetail {
+    string userId = 1;
+    string email = 2;
+    string isAvailable = 3;
+}

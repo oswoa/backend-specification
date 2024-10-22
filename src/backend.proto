@@ -2,6 +2,8 @@ syntax = "proto3";
 
 option go_package = "github.com/oswoa/backend-service";
 
+import "backend_model.proto";
+
 service BackendService {
     // サンプル用API
     rpc Hello (HelloRequest) returns (HelloResponse);
@@ -28,6 +30,5 @@ message UserListRequest {
 
 // ユーザ一覧照会API レスポンス
 message UserListResponse {
-    string userId = 1;
-    string email = 2;
+    repeated UserDetail userDetail = 1;
 }
