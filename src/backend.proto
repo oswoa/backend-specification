@@ -24,8 +24,8 @@ message HelloResponse {
 
 // ユーザ一覧照会API リクエスト
 message UserListRequest {
-    string email = 1;
-    bool isDeleted = 2;
+    string email     = 1;
+    bool   isDeleted = 2;
 }
 
 // ユーザ一覧照会API レスポンス
