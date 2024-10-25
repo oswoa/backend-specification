@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+option go_package = "github.com/oswoa/backend-service";
+
+import "model.proto";
+
+// ユーザ一覧照会API リクエスト
+message UserListRequest {
+  string email     = 1;
+  bool   isDeleted = 2;
+}
+
+// ユーザ一覧照会API レスポンス
+message UserListResponse {
+    repeated UserDetail userDetail = 1;
+}
