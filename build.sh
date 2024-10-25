@@ -5,7 +5,7 @@ if [ -d out ]; then
 fi
 
 mkdir out
-protoc -I=./src \
+/usr/local/protoc/bin/protoc -I=./src \
     --go_out=./out \
     --go_opt=paths=source_relative \
     --go-grpc_out=./out \
