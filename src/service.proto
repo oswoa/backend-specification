@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+option go_package = "github.com/oswoa/backend-service";
+
+import "api_user_list.proto";
+import "api_get_user_authority.proto";
+
+service BackendService {
+  // ユーザ一覧照会API
+  rpc UserList (UserListRequest) returns (UserListResponse);
+
+  // ユーザ権限取得API
+  rpc GetUserAuthority (GetUserAuthorityRequest) returns (GetUserAuthorityResponse);
+}

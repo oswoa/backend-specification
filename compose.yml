@@ -1,0 +1,5 @@
+services:
+  compile:
+    build: .
+    volumes:
+      - ./:/app

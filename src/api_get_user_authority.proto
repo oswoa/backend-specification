@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+option go_package = "github.com/oswoa/backend-service";
+
+import "model.proto";
+
+// ユーザ権限取得API リクエスト
+message GetUserAuthorityRequest {
+  string userId = 1;
+}
+
+// ユーザ権限取得API レスポンス
+message GetUserAuthorityResponse {
+  repeated UserAuthority userDetail = 1;
+}
